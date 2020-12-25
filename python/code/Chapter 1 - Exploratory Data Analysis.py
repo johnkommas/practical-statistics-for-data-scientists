@@ -9,7 +9,7 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 from scipy.stats import trim_mean
-from statsmodels import robust
+# from statsmodels import robust
 import wquantiles
 
 import seaborn as sns
@@ -66,7 +66,7 @@ print(state['Population'].quantile(0.75) - state['Population'].quantile(0.25))
 
 # Median absolute deviation from the median can be calculated with a method in _statsmodels_
 
-print(robust.scale.mad(state['Population']))
+# print(robust.scale.mad(state['Population']))
 print(abs(state['Population'] - state['Population'].median()).median() / 0.6744897501960817)
 
 ### Percentiles and Boxplots
